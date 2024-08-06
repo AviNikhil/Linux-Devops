@@ -1,0 +1,246 @@
+>>BASH SCRIPTING IN LINUX:
+
+requirement : any linux system -
+--------------------------------
+
+@one can use browser based site IDE- 'Replit' from which we can execute the bash scripts.
+@from windows too one can use linux, by using 'WSL' (Windows subsystem for Linux) this can be installed on top of the windows.
+
+===============================================================================================================================
+
+In Linux , to automate the things we use shell scripting/ bash scripting.
+for this one create the file and add required commands that can work together to
+complete the task.
+
+>>comments in bash is - #
+
+
+***DEFINATION : Bash Scripting:
+-------------------------------
+Bash Scripting is defined as a script written in a file containing the list of commands that to be executed together
+line-by-line to complete a particular task.
+
+It allows to perform to navigate to directory,open a folder, create a file etc things through ccommand - line.
+
+
+***Advantages of Bash Scripting:
+--------------------------------
+1. Automation - using bash scripting, one can automate the repetative task that has to be done
+
+2. Flexibility - It is easy to customize and modify for the specific task.
+
+3. Integration - Easily integrate with tools like databases,cloud services etc.
+
+4.Accessibility - It is easy to write and access that can be done with text editor.
+
+5. Debugging - If any issues in automation script, one can easily debug the issue as it is highly readable.
+
+
+***Overview of Bash shell and command line interface :
+------------------------------------------------------
+
+The terms "shell" and "bash" are used interchangeably. But there is a subtle difference between the two.
+
+The term "shell" refers to a program that provides a command-line interface for interacting with an operating system. Bash (Bourne-Again SHell) is one of the most commonly used Unix/Linux shells and is the default shell in many Linux distributions.
+
+
+
+***How to Create and Execute Bash scripts:
+-------------------------------------------
+1. Script naming conventions :
+        By naming convention, bash scripts end with .sh. However, bash scripts can run perfectly fine without the sh extension.
+ 
+2.Adding the Shebang :
+        Bash scripts start with a shebang. Shebang is a combination of bash # and bang ! followed by the bash shell path. This is the first line of the script. Shebang tells the shell to execute it via bash shell. Shebang is simply an absolute path to the bash interpreter.
+        
+ *example of the shebang statement - #!/bin/bash
+ * to find the bash shell path - which bash
+ 
+ 
+ 
+ ***Creating our first bash script :
+ -----------------------------------
+1. Create a file named run_all.sh using the vi command. You can use any editor of your choice. 
+     eg: vi run_all.sh
+ 
+2.Add the following commands in your file and save it:
+ 
+ #!/bin/bash
+echo "Today is " `date`
+
+echo -e "\nenter the path to directory"
+read the_path
+
+echo -e "\n you path has the following files and folders: "
+ls $the_path
+
+
+***Executing the bash script:
+-----------------------------
+ 1.To make the script executable, assign execution rights to your user using this command: 
+ chmod u+x run_all.sh
+ 
+ 2. You can run the script using any of the mentioned methods:
+
+    sh run_all.sh
+    bash run_all.sh
+    ./run_all.sh
+
+***Variables and data types in Bash:
+------------------------------------
+*Variables let you store data. You can use variables to read, access, and manipulate data throughout your script. 
+
+*There are no data types in Bash. In Bash, a variable is capable of storing numeric values, individual characters, or strings of characters.
+
+1. Assign the value directly:
+
+a=avinash
+
+2.  Assign the value based on the output obtained from a program or command, using command substitution. Note that $ is required to access an existing variable's value.
+
+a_name=$a
+
+3.To access the variable value, append $ to the variable name.
+
+echo $a_name
+
+
+***Input and output in Bash scripts:
+-------------------------------------
+1.Reading the user input and storing it in a variable. We can read the user input using the read command.
+eg:
+#!/bin/bash 
+
+echo "What's your name?" 
+
+read entered_name 
+
+echo -e "\nWelcome to bash tutorial" $entered_name
+
+
+2.  Reading from a file:
+
+This code reads each line from a file named input.txt and prints it to the terminal. We'll study while loops later in this article.
+
+while read line
+do
+  echo $line
+done < input.txt
+
+3.  Command line arguments:
+
+In a bash script or function, $1 denotes the initial argument passed, $2 denotes the second argument passed, and so forth.
+
+eg:
+#!/bin/bash
+echo Hello $1  (output is Hello Nikhil)
+
+./runn_all.sh Nikhil
+
+
+
+***Displaying output:
+----------------------
+1. Printing to the terminal:
+    eg: echo "Hi Iam Nikhil"
+
+
+2.  Writing to a file:
+    eg: echo "Hi I am Nikhil" > output.txt
+    This writes the text "This is some text." to a file named output.txt. Note that the >operator overwrites a file if it already has some content. 
+    
+
+3.  Appending to a file:
+    eg: echo "More text." >> output.txt
+    
+ 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
